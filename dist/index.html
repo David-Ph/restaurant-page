@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wokee Cafe</title>
+    <!-- ? font awesome -->
+    <script src="https://kit.fontawesome.com/5237ed7d0e.js" crossorigin="anonymous"></script>
     <!-- ? google font -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -21,7 +23,7 @@
           <img src="./images/page-logo.png" alt="" />
         </div>
         <ul class="main-nav">
-          <li class="menu-item">Home</li>
+          <li class="menu-item active">Home</li>
           <li class="menu-item">Menu</li>
           <li class="menu-item">Contact</li>
         </ul>
@@ -30,8 +32,23 @@
 
     <div class="page-container">
       <div id="content">
-        <h1 class="home-title">Come and get woke!</h1>
-        <div class="content-container">asd</div>
+        <div class="home">
+          <h1 class="home-title">Come and get woke!</h1>
+          <h2 class="home-subtitle">Relief your caffeine addiction!</h2>
+          <button class="see-menu">See Menu</button>
+        </div>
+        <div class="content-container">
+          <div class="location">
+            <h2 class="location-title">Where we are</h2>
+            <p class="location-logo"><i class="fas fa-map-marker-alt orange"></i></p>
+            <p class="location-details">3012  Cimmaron Road, Garden Grove, California</p>
+          </div>
+          <div class="opening-hours">
+            <h2 class="opening-hours-title">We're open:</h2>
+            <p class="opening-hours-logo"><i class="far fa-clock orange"></i></i></p>
+            <p class="opening-hours-details"><span class="orange">Everyday</span>: 08.00 - 23.00</p>
+          </div>
+        </div>
       </div>
     </div>
 
