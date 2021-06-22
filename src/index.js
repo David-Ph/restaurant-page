@@ -1,5 +1,7 @@
 import { loadNav } from "./nav";
 import { loadHome } from "./home";
+import { loadMenu } from "./menu";
+import { loadContact } from "./contact";
 
 const pageHeader = document.querySelector(".page-header");
 const content = document.getElementById("content");
@@ -15,10 +17,22 @@ pageHeader.addEventListener("click", changeTab);
 
 function changeTab(event) {
   if (event.target.classList.contains("nav-item")) {
-      console.log(event.target);
+      clearActiveTab();
+      event.target.classList.add('active');
+      if(event.target.innerHTML === 'Home'){
+        content.appendChild(loadHome);
+      }else if(event.target.innerHTML === 'Menu'){
+        content.appendChild(loadMenu);
+      }else if(event.target.innerHTML === 'Contact'){
+        content.appendChild(loadContact);
+      }
   }
 }
 
 function clearActiveTab(){
-    pageHeader.
+    const navItems = pageHeader.querySelector('.main-nav').querySelectorAll('.nav-item');
+    for(let i = 0; i < navItems.length; i++){
+      navItems[i].classList.remove('active');
+    }
+    content.innerHTML = '';
 }
